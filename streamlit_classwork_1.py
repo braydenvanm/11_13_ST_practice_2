@@ -12,9 +12,19 @@ st.markdown(
 "Print the dataframe you create and use the following code block to help get you started"
 )
 
+x_limit = 100
+
+x_axis = np.arange(0, x_limit, 1)
+
+y_data = [random.random() for value in x_axis]
+
+df = pd.DataFrame({'x': x_axis,
+                     'y': y_data})
+st.write(df)
+
 st.code(
 ''' 
-x_limit = 
+x_limit =
 
 # List of values from 0 to 100 each value being 1 greater than the last
 x_axis = np.arange()
