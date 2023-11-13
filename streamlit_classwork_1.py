@@ -42,6 +42,8 @@ st.markdown(
 "Use the following code block to help get you started."
 )
 
+scatter = alt.Chart(data=df).mark_point().encode()
+
 st.code(
 ''' 
 scatter = alt.Chart().mark_point().encode()
