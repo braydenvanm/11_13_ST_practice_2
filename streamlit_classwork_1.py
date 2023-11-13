@@ -42,7 +42,7 @@ st.markdown(
 "Use the following code block to help get you started."
 )
 
-scatter = alt.Chart(data=df).mark_point().encode()
+scatter = alt.Chart(data=df).mark_point().encode(x=x_axis, y=y_data)
 
 st.altair_chart(scatter, use_container_width=True)
 
