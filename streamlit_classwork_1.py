@@ -44,6 +44,8 @@ st.markdown(
 
 scatter = alt.Chart(data=df).mark_point().encode()
 
+st.altair_chart(scatter, use_container_width=True)
+
 st.code(
 ''' 
 scatter = alt.Chart().mark_point().encode()
