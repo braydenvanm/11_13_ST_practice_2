@@ -22,35 +22,24 @@ df = pd.DataFrame({'x': x_axis,
                      'y': y_data})
 st.write(df)
 
-st.code(
-''' 
-x_limit =
-
-# List of values from 0 to 100 each value being 1 greater than the last
-x_axis = np.arange()
-
-# Create a random array of data that we will use for our y values
-y_data = []
-
-df = pd.DataFrame({'x': x_axis,
-                     'y': y_data})
-st.write(df)''',language='python')
-
-
 st.markdown(
 "**QUESTION 2**: Using the dataframe you just created, create a basic scatterplot and Print it.\n"
 "Use the following code block to help get you started."
 )
 
-scatter = alt.Chart(data=df).mark_point().encode(x=x_axis, y=y_data)
+scatter = alt.Chart(df).mark_point().encode(
+    x='x',
+    y='y',
+    tooltip = ['x','y']
+    ).configure_point(
+        size = 75,
+        filled = True,
+        color = 'purple'
+    ).configure_axis(
+        
+    )
 
 st.altair_chart(scatter, use_container_width=True)
-
-st.code(
-''' 
-scatter = alt.Chart().mark_point().encode()
-
-st.altair_chart(scatter, use_container_width=True)''',language='python')
 
 
 st.markdown(
